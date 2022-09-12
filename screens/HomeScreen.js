@@ -4,8 +4,7 @@ import Header from '../Components/Home/Header'
 const Homescreen = () => {
     return (
         <SafeAreaView style={styles.container}>
-             <Header/> 
-        
+             <Header/>  
         </SafeAreaView>
     )
 }
