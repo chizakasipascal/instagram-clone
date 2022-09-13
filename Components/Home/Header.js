@@ -1,5 +1,8 @@
-import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native'
 import React from 'react'
+import { FontAwesome } from '@expo/vector-icons'; 
+import { MaterialIcons } from '@expo/vector-icons'; 
+import { MaterialCommunityIcons } from '@expo/vector-icons'; 
+import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native'
 
 const Header = () => {
   return (
@@ -12,9 +15,11 @@ const Header = () => {
         />
       </TouchableOpacity>
       <View style={styles.iconsContainer}>
-        <Text style={{ color: 'white' }}>Hello</Text>
-        <Text style={{ color: 'white' }}>Hello</Text>
-        <Text style={{ color: 'white' }}>Hello</Text>
+      <TouchableOpacity>
+      <MaterialIcons style={styles.icon} name="add-box" size={24}/>
+      </TouchableOpacity>
+      <FontAwesome  style={styles.icon} name="heart-o" size={24} />
+      <MaterialCommunityIcons   style={styles.icon} name="facebook-messenger" size={24}  />
       </View >
     </View>
   )
@@ -33,7 +38,12 @@ const styles = StyleSheet.create({
     resizeMode: 'contain' 
   },
   icon: {
-    width:30 
+    width:30,
+    height: 30,
+    marginLeft:10,
+    resizeMode:'contain',
+    color:'white',
+    
   },
   iconsContainer: { 
     flexDirection: 'row', 
